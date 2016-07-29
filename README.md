@@ -1,5 +1,5 @@
 # kurtsprojects
-My first repository of projects
+This repository holds small things that don't merit having their own
 
 
 ### Included projects
