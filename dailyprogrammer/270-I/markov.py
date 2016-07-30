@@ -86,11 +86,9 @@ class Ngram():
 ##
 if __name__ == "__main__":
 	#first, we generate a list of words from the given text file
-	file = open("trainer1.txt", 'r')
+	file = open("trainer.txt", 'r')
 
 	words = []
-
-
 	linecount = 0
 
 	# iterate through lines in training file
@@ -100,7 +98,7 @@ if __name__ == "__main__":
 		clean = line.lower()
 
 		for word in clean.split():
-			words.append(word.strip().strip())
+			words.append(word.strip('.<>/,\"\''))
 
 		if linecount == LIMIT:
 			break
@@ -109,7 +107,6 @@ if __name__ == "__main__":
 
 	#now, generate Ngrams from the word list
 	prefix_to_suffix = Ngram(PREFIX_SIZE)
-
 
 	i = 0
 
@@ -129,7 +126,6 @@ if __name__ == "__main__":
 	# generate the random paragraph from the generated Ngram set
 	paragraph = ""
 
-
 	prefix = prefix_to_suffix.get_random_prefix() # get random prefix to start
 
 	# start with these 2 words first
@@ -145,6 +141,9 @@ if __name__ == "__main__":
 
 		if i == paragraph_size - 1:
 			if paragraph[-1] != '.':
-				paragraph = paragraph + "."
+				paragraph = paragraph[:-1] + "."
+
+
+	paragraph = paragraph[0].upper() + paragraph[1:]
 
 	print paragraph
