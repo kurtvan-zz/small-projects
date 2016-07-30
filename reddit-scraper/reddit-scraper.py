@@ -2,13 +2,14 @@
 # SUBREDDIT SCRAPER v1.0 - By Kurt van Bendegem	#
 # ---------------------------------------------	#
 # Converts posts from any subreddit into text   #
-# files for offline viewing. 			#
+# files for offline viewing. 					#
 #################################################
 
 
 import os
 import praw
 import sys
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
