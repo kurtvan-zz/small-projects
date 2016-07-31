@@ -1,4 +1,4 @@
-# kurtsprojects
+# Small Projects
 This repository holds small things that don't merit having their own
 
 
