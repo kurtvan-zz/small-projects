@@ -5,7 +5,7 @@ This repository holds small things that don't merit having their own
 ### Included projects
 
 *	[reddit.com/r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/) challenges
-*	reddit-scraper, a simple script for locally downloading subreddit content
+*	reddit-scraper, a simple python script for locally downloading subreddit post text
 
 ### How to use
 
